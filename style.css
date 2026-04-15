@@ -282,86 +282,97 @@ body {
     }
 
     .content {
-        padding: 20px 18px;
+        padding: 18px 15px;
     }
 
     .header-text {
-        margin-bottom: 10px;
+        margin-bottom: 6px;
     }
 
     .subtitle {
-        font-size: 0.65rem;
-        letter-spacing: 1.2px;
-        margin-bottom: 8px;
+        font-size: 0.55rem;
+        letter-spacing: 0.8px;
+        margin-bottom: 6px;
+        line-height: 1.2;
+    }
+
+    .subtitle::before,
+    .subtitle::after {
+        width: 15px;
+        margin: 0 5px;
+    }
+
+    .subtitle::before {
+        margin-right: 5px;
     }
 
     .main-title {
-        font-size: 1.8rem;
-        letter-spacing: 1.5px;
-        margin: 5px 0;
+        font-size: 1.6rem;
+        letter-spacing: 1.2px;
+        margin: 3px 0;
     }
 
     .graduate-name {
-        font-size: 1rem;
-        margin-bottom: 12px;
+        font-size: 0.9rem;
+        margin-bottom: 10px;
     }
 
     .photo-frame {
         width: 70%;
-        max-width: 200px;
-        margin: 0 auto 15px;
-        border: 4px solid #4a2020;
+        max-width: 180px;
+        margin: 0 auto 12px;
+        border: 3px solid #4a2020;
     }
 
     .invited-guest {
-        margin: 15px 0;
-        padding: 10px 12px;
+        margin: 12px 0;
+        padding: 8px 10px;
         border-radius: 6px;
     }
 
     .guest-label {
-        font-size: 0.65rem;
-        margin-bottom: 3px;
+        font-size: 0.55rem;
+        margin-bottom: 2px;
     }
 
     .guest-name {
-        font-size: 1.2rem;
-        margin-top: 3px;
+        font-size: 1.1rem;
+        margin-top: 2px;
     }
 
     .divider {
-        margin: 10px 0;
+        margin: 8px 0;
     }
 
     .details-section {
-        gap: 10px;
-        margin: 10px 0;
-        padding: 10px 12px;
+        gap: 8px;
+        margin: 8px 0;
+        padding: 8px 10px;
         flex-direction: column;
     }
 
     .detail-item {
-        padding: 8px 0;
+        padding: 6px 0;
     }
 
     .detail-item h3 {
-        font-size: 0.65rem;
-        margin-bottom: 3px;
+        font-size: 0.55rem;
+        margin-bottom: 2px;
         margin-top: 0;
     }
 
     .date {
-        font-size: 0.8rem;
-        margin-bottom: 2px;
+        font-size: 0.75rem;
+        margin-bottom: 1px;
     }
 
     .time {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
     }
 
     .location {
-        font-size: 0.7rem;
-        line-height: 1.3;
+        font-size: 0.65rem;
+        line-height: 1.2;
     }
 
     .separator {
@@ -369,48 +380,58 @@ body {
     }
 
     .footer {
-        margin-top: 10px;
-        padding-top: 10px;
+        margin-top: 8px;
+        padding-top: 8px;
     }
 
     .footer p {
-        font-size: 0.7rem;
-        letter-spacing: 0.5px;
-        line-height: 1.4;
+        font-size: 0.6rem;
+        letter-spacing: 0.3px;
+        line-height: 1.3;
     }
 
     .music-control {
-        top: 15px;
-        right: 15px;
+        top: 80px;
+        right: 12px;
     }
 
     .music-btn {
-        width: 45px;
-        height: 45px;
-        font-size: 18px;
+        width: 42px;
+        height: 42px;
+        font-size: 16px;
     }
 }
 
 @media (max-width: 360px) {
     .content {
-        padding: 15px 12px;
-    }
-
-    .main-title {
-        font-size: 1.5rem;
+        padding: 12px 10px;
     }
 
     .subtitle {
-        font-size: 0.6rem;
+        font-size: 0.5rem;
+        letter-spacing: 0.6px;
+    }
+
+    .main-title {
+        font-size: 1.4rem;
+    }
+
+    .graduate-name {
+        font-size: 0.8rem;
     }
 
     .photo-frame {
         width: 75%;
+        max-width: 150px;
+    }
+
+    .guest-name {
+        font-size: 1rem;
     }
 
     .music-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 16px;
+        width: 38px;
+        height: 38px;
+        font-size: 14px;
     }
 }
