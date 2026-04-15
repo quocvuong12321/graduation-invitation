@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thiệp Mời Tốt Nghiệp - Nguyễn Quốc Vương</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Dancing+Script:wght@700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Dancing+Script:wght@700&family=Quicksand:wght@400;600&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <div class="card-container">
         <div class="invitation-card">
@@ -16,16 +20,16 @@
                 </div>
 
                 <h1 class="main-title">LỄ TỐT NGHIỆP</h1>
-                
+
                 <p class="graduate-name">của Nguyễn Quốc Vương</p>
 
-                <div class="photo-frame">
-                    <img src="assets\MEITU_20260217_095653599.jpg" alt="Ảnh tốt nghiệp Nguyễn Quốc Vương" id="grad-photo">
+                <div class="photo-frame" >
+                    <img src=" assets/MEITU_20260415_185025028.JPG" alt="Ảnh tốt nghiệp Nguyễn Quốc Vương" id="grad-photo">
                 </div>
 
                 <div class="invited-guest">
                     <p class="guest-label">Khách mời:</p>
-                    <h2 id="guest-name" class="guest-name">Nguyễn Diễm Tuyền</h2>
+                    <h2 id="guest-name" class="guest-name">Những người bạn</h2>
                 </div>
 
                 <hr class="divider">
@@ -39,17 +43,33 @@
                     <span class="separator">|</span>
                     <div class="detail-item">
                         <h3>SÂN TRƯỜNG</h3>
-                        <p class="location">ĐẠI HỌC CÔNG THƯƠNG TPHCM<br>140 Lê Trọng Tấn<br>Phường Tây Thạnh, TPHCM</p>
+                        <p class="location">
+                            ĐẠI HỌC CÔNG THƯƠNG TPHCM<br>
+                            140 Lê Trọng Tấn, Tây Thạnh, Tân Phú
+                        </p>
                     </div>
                 </div>
 
                 <div class="footer">
-                    <p>Sự hiện diện của bạn là niềm vinh hạnh cho mình!</p>
+                    <p>
+                        Cảm ơn bạn đã là một phần quan trọng trong những năm tháng rực rỡ nhất của mình.
+                    </p>
                 </div>
             </div>
-        </div>
-    </div>
 
+        </div>
+
+    </div>
+    <audio id="bg-music" loop>
+        <source src="assets/Gymnopédie No. 1 - Erik Satie.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="music-control" class="music-control">
+        <button id="music-btn" class="music-btn">
+            <span id="music-icon">🎵</span>
+        </button>
+    </div>
     <script src="script.js"></script>
 </body>
+
 </html>
