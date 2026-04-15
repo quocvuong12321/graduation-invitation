@@ -4,18 +4,31 @@ window.onload = function() {
     const guestName = urlParams.get('name');
     const nameDisplay = document.getElementById('guest-name');
 
+    // Nếu có name từ URL, lưu vào localStorage
     if (guestName) {
-        nameDisplay.innerText = guestName
+        localStorage.setItem('guestName', guestName);
+        nameDisplay.innerText = guestName;
+    } else {
+        // Nếu không có URL, lấy từ localStorage
+        const savedName = localStorage.getItem('guestName');
+        if (savedName) {
+            nameDisplay.innerText = savedName;
+        }
     }
 
-    // Hiệu ứng nhẹ khi cuộn
     console.log("Chúc mừng tốt nghiệp, Vương!");
 };
 
-
-function openGoogleMaps() {
-    window.open("https://maps.google.com?q=Đại+học+Công+Thương+TP.HCM,+140+Lê+Trọng+Tấn,+Tây+Thạnh,+TP.HCM", "_blank");
+// Hàm để lưu tên khi chuyển trang
+function navigateWithGuestName(url) {
+    const guestName = document.getElementById('guest-name').innerText;
+    if (guestName && guestName !== 'Những người bạn') {
+        localStorage.setItem('guestName', guestName);
+    }
+    window.location.href = url;
 }
+
+
 
 document.addEventListener('DOMContentLoaded', function() {
     const music = document.getElementById('bg-music');
