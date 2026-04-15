@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Địa chỉ đỗ xe - Lễ tốt nghiệp</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Dancing+Script:wght@700&family=Quicksand:wght@400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #3d1a1a 0%, #2a1212 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .parking-card {
+            background: linear-gradient(to bottom, #4a2020, #3d1a1a);
+            max-width: 500px;
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(139, 0, 0, 0.3);
+            border: 1px solid #6b2e2e;
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        .parking-container {
+            padding: 30px 25px;
+            text-align: center;
+        }
+
+        .parking-header {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #6b2e2e;
+        }
+
+        .parking-header h1 {
+            font-family: 'Playfair Display', serif;
+            color: #ff6b6b;
+            font-size: 2.2rem;
+            text-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .parking-header p {
+            color: #d4a5a5;
+            font-size: 0.85rem;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+
+        .parking-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .parking-item {
+            background: rgba(232, 136, 136, 0.08);
+            border: 1px solid rgba(232, 136, 136, 0.2);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 12px;
+            text-align: left;
+            transition: all 0.3s ease;
+        }
+
+        .parking-item:hover {
+            background: rgba(232, 136, 136, 0.15);
+            border-color: rgba(232, 136, 136, 0.4);
+            transform: translateX(5px);
+        }
+
+        .parking-item h3 {
+            color: #e88888;
+            margin-bottom: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .parking-item p {
+            margin: 4px 0;
+            font-size: 0.75rem;
+            color: #d4a5a5;
+            line-height: 1.5;
+        }
+
+        .parking-item strong {
+            color: #ff6b6b;
+        }
+
+        .divider {
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #6b2e2e 20%, #6b2e2e 80%, transparent);
+            margin: 20px 0;
+        }
+
+        .footer-section {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #6b2e2e;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #ff6b6b, #e88888);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: 1px solid #ff6b6b;
+            text-transform: uppercase;
+        }
+
+        .back-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+            background: linear-gradient(135deg, #e88888, #ff6b6b);
+        }
+
+        @media (max-width: 480px) {
+            .parking-card {
+                border-radius: 12px;
+            }
+
+            .parking-container {
+                padding: 20px 15px;
+            }
+
+            .parking-header h1 {
+                font-size: 1.8rem;
+                letter-spacing: 1.5px;
+            }
+
+            .parking-header p {
+                font-size: 0.7rem;
+            }
+
+            .parking-item {
+                padding: 12px;
+                margin-bottom: 10px;
+            }
+
+            .parking-item h3 {
+                font-size: 0.95rem;
+                margin-bottom: 6px;
+            }
+
+            .parking-item p {
+                font-size: 0.7rem;
+            }
+
+            .back-btn {
+                padding: 10px 20px;
+                font-size: 0.7rem;
+            }
+
+            .divider {
+                margin: 15px 0;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parking-card">
+        <div class="parking-container">
+            <div class="parking-header">
+                <h1>🚗 Địa chỉ đỗ xe</h1>
+                <p>ĐẠI HỌC CÔNG THƯƠNG TPHCM</p>
+            </div>
+
+            <ul class="parking-list">
+                <li class="parking-item">
+                    <h3>🅿️ Bãi đỗ xe chính</h3>
+                    <p><strong>Vị trí:</strong> Hầm để xe và khu nhà xe (tầng 1 - 5) tại cơ sở chính</p>
+                    <p><strong>Địa chỉ:</strong> 140 Lê Trọng Tấn, Phường Tây Thạnh, TP.HCM</p>
+                    <p><strong>Lưu ý:</strong> Nhà trường hỗ trợ gửi xe miễn phí cho khách mời</p>
+                </li>
+            
+                <li class="parking-item">
+                    <h3>🅿️ Bãi đỗ xe phụ</h3>
+                    <p><strong>Vị trí:</strong> Khoa Giáo dục Thể chất và Quốc phòng - An ninh</p>
+                    <p><strong>Địa chỉ:</strong> 73/1 Nguyễn Đỗ Cung, Phường Tây Thạnh, TP.HCM</p>
+                    <p><strong>Lưu ý:</strong> Vui lòng gửi xe tại đây và di chuyển bộ đến khu vực tổ chức</p>
+                </li>
+            
+                <li class="parking-item">
+                    <h3>🅿️ Bãi đỗ xe tư nhân</h3>
+                    <p><strong>Vị trí:</strong> Khu vực cổng sau Trường Đại học Công Thương TP.HCM</p>
+                    <p><strong>Địa chỉ:</strong> Khu vực đường Bùi Xuân Phái, Phường Tây Thạnh, TP.HCM</p>
+                    <p><strong>Lưu ý:</strong> Có các điểm giữ xe tự phát xung quanh khu vực, chi phí khoảng 5.000 VNĐ/xe</p>
+                </li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <div class="footer-section">
+                <a href="index.html" class="back-btn">← Quay lại thiệp mời</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

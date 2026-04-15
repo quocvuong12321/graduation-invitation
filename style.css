@@ -435,3 +435,81 @@ body {
         font-size: 14px;
     }
 }
+
+
+.contact-section {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #6b2e2e;
+}
+
+.contact-label {
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+    color: #d4a5a5;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.phone-number {
+    font-size: 1rem;
+    color: #e88888;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.parking-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #ff6b6b, #e88888);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: 1px solid #ff6b6b;
+    text-transform: uppercase;
+}
+
+.parking-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+    background: linear-gradient(135deg, #e88888, #ff6b6b);
+}
+
+@media (max-width: 480px) {
+    .contact-section {
+        margin-top: 8px;
+        padding-top: 8px;
+    }
+
+    .contact-label {
+        font-size: 0.55rem;
+        margin-bottom: 4px;
+    }
+
+    .phone-number {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+
+    .parking-btn {
+        padding: 8px 16px;
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .phone-number {
+        font-size: 0.8rem;
+    }
+
+    .parking-btn {
+        padding: 7px 14px;
+        font-size: 0.65rem;
+    }
+}
