@@ -16,8 +16,6 @@ function subtractHours(timeString, hours) {
 window.onload = function() {
     const urlParams = new URLSearchParams(window.location.search);
     const guestName = urlParams.get('name');
-    const eventDate = urlParams.get('date');
-    const eventTimeParam = urlParams.get('time');
     
     const nameDisplay = document.getElementById('guest-name');
     const dateDisplay = document.getElementById('event-date');
@@ -28,28 +26,12 @@ window.onload = function() {
         nameDisplay.innerText = guestName;
     }
 
-    // Xử lý ngày sự kiện
-    if (eventDate) {
-        dateDisplay.innerText = eventDate;
-    }
-
-    // Xử lý giờ sự kiện
-    if (eventTimeParam) {
-        // Nếu có tham số, trừ đi 2 giờ
-        const correctTime = subtractHours(eventTimeParam, 2);
-        timeDisplay.innerText = correctTime;
-    } else {
-        // Nếu không có tham số, mặc định là 13:30
-        timeDisplay.innerText = '13:30';
-    }
+    // Giá trị cố định
+    dateDisplay.innerText = '23.04.2026';
+    timeDisplay.innerText = '13:15 - 15:00';
 
     console.log("Chúc mừng tốt nghiệp, Vương!");
 };
-
-// Hàm để chuyển trang
-function navigateWithGuestName(url) {
-    window.location.href = url;
-}
 
 // Hàm để chuyển trang parking và giữ tham số URL
 function navigateToParkingWithParams() {
