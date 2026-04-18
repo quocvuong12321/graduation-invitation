@@ -1,9 +1,23 @@
+// Hàm chuyển đổi giờ (format: "H:MM" hoặc "HH:MM")
+function subtractHours(timeString, hours) {
+    const [h, m] = timeString.split(':').map(Number);
+    let newHours = h - hours;
+    
+    // Xử lý trường hợp giờ âm (quay về ngày hôm trước)
+    if (newHours < 0) {
+        newHours += 24;
+    }
+    
+    // Format lại theo kiểu "H:MM"
+    return `${newHours}:${String(m).padStart(2, '0')}`;
+}
+
 // Tự động lấy tên khách mời từ URL
 window.onload = function() {
     const urlParams = new URLSearchParams(window.location.search);
     const guestName = urlParams.get('name');
     const eventDate = urlParams.get('date');
-    const eventTime = urlParams.get('time');
+    const eventTimeParam = urlParams.get('time');
     
     const nameDisplay = document.getElementById('guest-name');
     const dateDisplay = document.getElementById('event-date');
@@ -11,51 +25,41 @@ window.onload = function() {
 
     // Xử lý tên khách mời
     if (guestName) {
-        localStorage.setItem('guestName', guestName);
         nameDisplay.innerText = guestName;
-    } else {
-        const savedName = localStorage.getItem('guestName');
-        if (savedName) {
-            nameDisplay.innerText = savedName;
-        }
     }
 
     // Xử lý ngày sự kiện
     if (eventDate) {
-        localStorage.setItem('eventDate', eventDate);
         dateDisplay.innerText = eventDate;
-    } else {
-        const savedDate = localStorage.getItem('eventDate');
-        if (savedDate) {
-            dateDisplay.innerText = savedDate;
-        }
     }
 
     // Xử lý giờ sự kiện
-    if (eventTime) {
-        localStorage.setItem('eventTime', eventTime);
-        timeDisplay.innerText = eventTime;
+    if (eventTimeParam) {
+        // Nếu có tham số, trừ đi 2 giờ
+        const correctTime = subtractHours(eventTimeParam, 2);
+        timeDisplay.innerText = correctTime;
     } else {
-        const savedTime = localStorage.getItem('eventTime');
-        if (savedTime) {
-            timeDisplay.innerText = savedTime;
-        }
+        // Nếu không có tham số, mặc định là 13:30
+        timeDisplay.innerText = '13:30';
     }
 
     console.log("Chúc mừng tốt nghiệp, Vương!");
 };
 
-// Hàm để lưu dữ liệu khi chuyển trang
+// Hàm để chuyển trang
 function navigateWithGuestName(url) {
-    const guestName = document.getElementById('guest-name').innerText;
-    if (guestName && guestName !== 'Những người bạn') {
-        localStorage.setItem('guestName', guestName);
-    }
     window.location.href = url;
 }
 
-
-
+// Hàm để chuyển trang parking và giữ tham số URL
+function navigateToParkingWithParams() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const params = new URLSearchParams(urlParams);
+    
+    // Tạo URL mới với tất cả tham số
+    const newUrl = 'parking.html?' + params.toString();
+    window.location.href = newUrl;
+}
 
 document.addEventListener('DOMContentLoaded', function() {
     const music = document.getElementById('bg-music');
@@ -77,16 +81,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Sự kiện khi nhấn nút
     musicBtn.addEventListener('click', (e) => {
-        e.stopPropagation(); // Ngăn sự kiện click lan ra ngoài
+        e.stopPropagation();
         toggleMusic();
     });
 
-    // Mẹo: Tự động phát khi khách bấm vào thiệp lần đầu (để lách luật autoplay)
+    // Tự động phát khi khách bấm vào thiệp lần đầu
     document.body.addEventListener('click', () => {
         if (music.paused) {
             music.play();
             musicIcon.innerText = '🔊';
             musicBtn.classList.add('rotating');
         }
-    }, { once: true }); // Chỉ chạy đúng 1 lần duy nhất
+    }, { once: true });
 });

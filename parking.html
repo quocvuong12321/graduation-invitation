@@ -217,10 +217,25 @@
             <div class="divider"></div>
 
             <div class="footer-section">
-                <a href="index.html" class="back-btn">← Quay lại thiệp mời</a>
+                <a href="index.html" id="back-btn" class="back-btn">← Quay lại thiệp mời</a>
             </div>
         </div>
     </div>
+
+    <script>
+        // Giữ lại các tham số URL khi quay lại
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const backBtn = document.getElementById('back-btn');
+            
+            // Lấy tất cả tham số từ URL hiện tại
+            const params = new URLSearchParams(urlParams);
+            
+            // Tạo URL mới với tất cả tham số
+            const newUrl = 'index.html?' + params.toString();
+            backBtn.href = newUrl;
+        };
+    </script>
 </body>
 
 </html>
